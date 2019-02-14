@@ -53,6 +53,56 @@ c1.color = .Blue
 c1.type = "corolla"
 c1.display()
 
+print("----------Structure Exammple----------")
+
+
+//structure and enum are the value type and class is the reference type
+struct Employee
+{
+    var eid: Int
+    var enm: String
+    var salary: Float
+
+    //u must declare init in structure
+    init()
+    {
+        self.eid = -1
+        self.enm = String()
+        self.salary = 0.0
+    }
+    func display()
+    {
+        print(self.eid)
+        print(self.enm)
+        print(self.salary)
+    }
+    //mutating can help to assign the same value as self.nme = name. u cant modify without mutatble.
+    //in structure if u want to change the value within the func then u must write mutating there
+    mutating func setname(name: String)
+    {
+        self.enm = name
+    }
+}
+
+//var e1 = Employee(eid: 1, enm: "khushi", salary: 1200.00)
+var e1 = Employee()
+e1.display()
+
+var i: Int = 100
+var a: Int
+a = i
+a = 200
+//print(i,a)
+
+
+var e2 = e1
+e2.eid = 200
+e2.display()
+ 
+
+
+
+
 
 
 
